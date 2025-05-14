@@ -82,5 +82,30 @@ public class OpExam {
 			System.out.println();	
 		}
 		
+		
+		
+//		for(int i = 65; i <= 90; i++) {
+//			char num1 = (char)i;
+//			for(int j = 90; j >= 65; j--) {		
+//			char num2 = (char)j;
+//			char = (char)(num1 + num2);
+//			}
+//			
+//		}
+		
+		char end = 'Z';
+		for(char cc = 'A'; cc <= 'Z'; cc++) {
+			for(char ddd = cc; ddd <= end; ddd++ ) {
+				System.out.print(ddd);
+			}
+			end--;
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
 	}	
 }
