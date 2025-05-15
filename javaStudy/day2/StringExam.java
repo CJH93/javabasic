@@ -101,10 +101,10 @@ public class StringExam {
 						char theCha = eId.charAt(i);
 						if((theCha >= 'a' && theCha <= 'z') || (theCha >= 'A' && theCha <= 'Z') || (theCha >= '0' && theCha <= '9')) {
 							System.out.println("입력 성공");
-							break;
+							continue;
 						}
 						else {
-							System.out.println("영문자나 숫자가 아님 입력 갑 :" + theCha);
+							System.out.println("영문자나 숫자가 아닌 입력 값 :" + theCha);
 //							return;
 							// 프로그램 명시적으로 종료하는 법
 							System.exit(0);
@@ -123,32 +123,6 @@ public class StringExam {
 			System.out.println("@가 없습니다.");
 			return;
 		}
-		
-		
-		
-//			int idLeng = eId.length();
-//				
-//			
-//				if(idLeng<6) {
-//					System.out.println("6자 이상 입력해주세요.");
-//				}
-//				else if(idLeng>10) {
-//					System.out.println("10자 초과");
-//				}
-			
-			
-//			for(int i=0; i<idLeng; i++) {
-//				char first = eId.charAt(i);
-//				System.out.println(first);
-//				if(first) {
-//					
-//				}
-//			}
-		
-			
-		
-		
-		
 		
 		
 		
