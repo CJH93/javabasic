@@ -8,7 +8,12 @@ public class RockPaperScissors {
 		
 		
 		Scanner sc = new Scanner(System.in);
+
 				
+
+		System.out.print("가위, 바위, 보 또는 1, 2, 3 입력");
+		
+
 		String[] RPS = {"가위", "바위", "보"};
 		int win = 0, lose = 0, draw = 0, total = 0;
 		
