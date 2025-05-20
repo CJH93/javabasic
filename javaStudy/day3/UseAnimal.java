@@ -19,9 +19,9 @@ public class UseAnimal {
 		 */
 		
 		// 다형성을 이용한 인스턴스 생성
-//		Animal dog = new Dog("초코","푸들");
-//		Animal cat = new Cat("나비","짬타이거");
-//		Animal duck = new Duck("꽥꽥이","오리");
+		Animal dog = new Dog("초코","푸들");
+		Animal cat = new Cat("나비","짬타이거");
+		Animal duck = new Duck("꽥꽥이","오리");
 //		
 //		
 //		

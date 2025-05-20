@@ -1,7 +1,7 @@
 package study;
 
 // User class 정의 (Id, Password, NickName)
-public class User {
+public class User implements Trade{
 	private String Id;
 	private String Password;
 	private String NickName;
@@ -57,6 +57,19 @@ public class User {
 		NickName = nickName;
 	}
 
+	@Override
+	public void buyItem(String item) {
+		System.out.println("아이템 삽니다.");
+		
+	}
+
+	@Override
+	public void sellItem(String index) {
+		System.out.println("아이템 팝니다.");
+		
+	}
+
+	
 	
 	
 }

@@ -5,6 +5,11 @@ public class Duck extends Animal{
 	private String name;
 	private String breed;
 	
+	protected Duck(String name) {
+		super("오리");
+		this.name = name;
+	}
+	
 	public Duck(String name, String breed) {
 		super("오리");
 		this.name = name;
