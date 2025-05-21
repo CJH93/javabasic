@@ -27,7 +27,7 @@ public class FinalExam {
 		System.out.println(a);
 		// 객체 변경 금지
 		// arr = new double[]{1, 2, 3};
-		arr[0] = 3.14; // 값 변경은 가능 (레퍼런스 변경 금지)
+		arr[0] = 3.14; // 배열의 값 변경은 가능 (레퍼런스 변경 금지)
 		System.out.println(Arrays.toString(arr));
 		
 	}

@@ -24,11 +24,12 @@ public class UseRemotcon {
 		audioRc.volumeUp(9);
 		
 		tvRc.setMute(true);
-		audioRc.setMute(false);
+		audioRc.setMute(true);
 		
 		System.out.println(((TV)tvRc).getVolume());
 		System.out.println(((Audio)audioRc).getVolume());
 		
+		RemotControl.changeBatter();
 		
 
 	}

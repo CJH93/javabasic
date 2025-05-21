@@ -40,6 +40,11 @@ public interface RemotControl {
 	 * sub class 에서 특정 목적으로 활용되도록 정의 하는 경우도 많음
 	 * 꼭 기억! (나중에 스프링부트에 많이 사용)
 	 * 문법은 리턴타입 앞에 default 키워드를 넣기만 하면 됨.
+	 * 
+	 * 꼭 기억하기! default 메서드 또한 자식이 필요에 따라서 override 가능.
+	 * 이 때 주의해야 할 점은 반드시 public 이어야 함
+	 * default 키워드 생략 해야함
+	 * 
 	 */
 	
 	default void setMute(boolean mute) {
@@ -55,8 +60,32 @@ public interface RemotControl {
 		}
 	}
 	
+	/*
+	 * 정적메서드 : 이 메서드는 구현객체가 필요 없는 메서드입니다.
+	 * 즉 구현하는 클래스가 아니더라도 이 메서드를 호출할 수 있다는 뜻임
+	 * ex> Interface.staticMethod();
+	 * 
+	 * 문법은 다음과 같음 : public || private static returnType methodName(p1, p1...);
+	 * 
+	 * 내부의 static 만 호출 가능함.
+	 * 
+	 */
+	
+	// 리모컨 배터리 교환 정의
+	// 배터리는 리모컨에 국한된 기능이기 때문에 자신이 이 기능을 정의
+	public static void changeBatter() {
+		System.out.println("리모컨 배터리를 교체함");
+	}
 	
 	
-	
+	/*
+	 * private 메서드 : 이 메서드는 인터페이스 내부에서만 활용하도록 정의된 내용을 갖도록 하는 것이 목적
+	 * 이 메서드는 일반 멤버 메서드가 필요시에 호출 할 수 있도록 설계 됨
+	 * 이 말은 곧 default 메서드에서 호출 가능하도록 설계
+	 * 코드를 재활용 할 수 있기 때문에 코드 중복을 줄일 수 있음
+	 * 
+	 * private static 메서드 : static 메서드에 호출 하도록 설계 됨
+	 * 또한, default 메서드에서 호출이 가능함
+	 */
 	
 }
