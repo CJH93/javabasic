@@ -1,8 +1,53 @@
 package javaStudy.day2;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Set;
+
 public class StringExam {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		
+		String chArr = String.copyValueOf(new char[]{'a', 'b'});
+		System.out.println(chArr);
+				
+//		Object obj = new StringExam();
+		
+		
+		String aa = "a";
+		String newA = new String(aa);
+		System.out.println(aa == newA);
+		
+		byte[] barr = {48, 49, 50, 51, 52, 53};
+		newA = new String(barr);
+		System.out.println(newA);
+		
+		newA = new String(barr, 3, 3);
+		System.out.println(newA);
+		
+		int[] chars = {30921, 51134, 5120};
+		newA = new String(chars, 0, chars.length);
+		System.out.println("--> " + newA);
+		
+		// 문자셋의 정보 객체 생성
+		Charset charset = Charset.defaultCharset();
+		System.out.println(charset);
+		
+		Set<String> charsets = charset.aliases();
+		charsets.forEach(theCharset -> System.out.println(theCharset));
+		
+		newA = new String("최재형");
+		barr = newA.getBytes();
+		
+		System.out.println(Arrays.toString(barr));
+		
+		// UTF-8 로 Encoding 된 한글명을 ISO-8859-1 로 DECONDING
+		newA = new String(barr,"ISO-8859-1");
+		
+		System.out.println(newA);
+			
+		
 		int a = 10;
 		
 		String str = null; // 보통 객체 초기화 값으로 null 줌.
@@ -126,6 +171,39 @@ public class StringExam {
 		
 		
 		
+		
+		String joinStr = String.join(":", "abcd", "bcde");
+		System.out.println(joinStr);
+		
+		// subsequence 를 이용해서 bcde 를 StringBuilder sb 객체 생성
+		String[] strs = joinStr.split("[\\:]");
+		System.out.println(Arrays.toString(strs));
+		
+		StringBuilder sb = new StringBuilder(joinStr.subSequence(joinStr.indexOf(":")+1, joinStr.length()));
+		
+		System.out.println(sb);
+		
+		// sb 의 값이 그대로 유지되도록 해서 String 객체의 conStr 객체로 생성
+		String conStr = sb.toString();
+		System.out.println(conStr);
+		
+		boolean b = true;
+		
+		// true 가 문자열로 나옴
+		String bStr = String.valueOf(b);
+		System.out.println(bStr);
+		System.out.println(String.valueOf(10));
+		
+//		if(bStr)
+//		{
+//			
+//		}
+		
+		// 파싱 
+		if(Boolean.parseBoolean(bStr))
+		{
+			
+		}
 		
 	}
 

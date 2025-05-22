@@ -11,6 +11,8 @@ public class UseAnimal {
 //		Duck duck = new Duck("꽥꽥이","오리");
 		
 		
+		
+		
 		/*
 		 * 다형성(polymorphism) : 상속관계에서 인스턴스를 생성할때 ref 타입이 변경되는 것을 말함.
 		 * 여기서 중요한건, 부모타입으로 자식 인스턴스를 생성해도, 인스턴스는 무조건 호출된 생성자의 instance 라는 것임
@@ -23,6 +25,7 @@ public class UseAnimal {
 		Animal cat = new Cat("나비","짬타이거");
 		Animal duck = new Duck("꽥꽥이","오리");
 //		
+		System.out.println(dog.toString());
 //		
 //		
 //		System.out.println(dog);

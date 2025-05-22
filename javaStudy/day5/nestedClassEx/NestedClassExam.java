@@ -43,6 +43,8 @@ public class NestedClassExam {
 //		A.B b = a.new B();
 //		b.doSome1();
 //		
+		
+		// static
 //		C.D d = new C.D();
 		
 		LocalNestedEx local = new LocalNestedEx();
