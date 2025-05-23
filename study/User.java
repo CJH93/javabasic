@@ -6,15 +6,15 @@ public class User implements Trade{
 	private String Password;
 	private String NickName;
 
-	public User(String Id, String Password) {
-		this.Id = Id;
-		this.Password = Password;
-	}
-
-	public User(String Id, String Password, String NickName) {
-		this(Id, Password);
-		this.NickName = NickName;
-	}
+//	public User(String Id, String Password) {
+//		this.Id = Id;
+//		this.Password = Password;
+//	}
+//
+//	public User(String Id, String Password, String NickName) {
+//		this(Id, Password);
+//		this.NickName = NickName;
+//	}
 
 	@Override
 	public String toString() {

@@ -4,7 +4,7 @@ public class Admin extends User{
 
 	private int num;
 	public Admin(String id, String pass , String nickname, int num) {
-		super(id, pass, nickname);
+//		super();
 		this.num = num;
 	}
 	
@@ -25,6 +25,7 @@ public class Admin extends User{
 	public static void main(String[] args) {
 		Admin admin = new Admin("", "", "", 1);
 	}
+	
 	
 	
 	

@@ -26,10 +26,10 @@ public class EmailChecker {
 					//첫자 검증통과 되었으니, ID 전체를 검증합시다....for 가 필요함..
 					for(int i = 1; i<id.length(); i++) {
 						char theCha = id.charAt(i);//두번째 문자부터 검증시작..
-						if((firCh >= 'a' && firCh <= 'z') || 
-								(firCh >= 'A' && firCh <= 'Z') || (firCh >= '0' && firCh <= '9')) {
+//						if((theCha >= 'a' && theCha <= 'z')
+							if((Character.isAlphabetic(theCha))|| (Character.isDigit(theCha))){
 							//ID 통과됨..
-							break;
+							continue;
 						}else {
 							System.out.println("영문자나 숫자가 아닌게 들어감 확인해..니꺼--> " + theCha);
 							//프로그램은 명시적으로 종료하는 법
