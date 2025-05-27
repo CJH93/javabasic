@@ -12,15 +12,15 @@ public class UseLombok {
 
 		Runtime runtime = Runtime.getRuntime();
 		
-//		runtime.exec("explorer.exe http://www.naver.com");
+		runtime.exec("explorer.exe http://www.naver.com");
 		
 //		runtime.exec(new String[] {"notepad.exe"});
 		
-		System.out.print(false);
-		
-		String str = "Hello";
-		
-		System.err.println(str);
+//		System.out.print(false);
+//		
+//		String str = "Hello";
+//		
+//		System.err.println(str);
 		
 	}
 
