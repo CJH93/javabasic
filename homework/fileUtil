@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+
+public class FileUtil {
+    public static boolean userExists(String email) {
+        File f = new File(Constants.USER_DATA_DIR + email + ".dat");
+        return f.exists();
+    }
+
+    public static void saveUser(User u) {
+        try (BufferedWriter bw = new BufferedWriter(
+                new FileWriter(Constants.USER_DATA_DIR + u.getEmail() + ".dat"))) {
+            bw.write(u.toFileString());
+        } catch (IOException e) {
+            System.out.println("파일 저장 오류: " + e.getMessage());
+        }
+    }
+
+    public static User loadUser(String email) {
+        File f = new File(Constants.USER_DATA_DIR + email + ".dat");
+        if (!f.exists()) return null;
+        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+            String s = br.readLine();
+            return User.fromFileString(s);
+        } catch (IOException e) {
+            System.out.println("파일 읽기 오류: " + e.getMessage());
+            return null;
+        }
+    }
+
+    public static List<User> loadAllUsers() {
+        List<User> list = new ArrayList<>();
+        File dir = new File(Constants.USER_DATA_DIR);
+        File[] files = dir.listFiles((d, name) -> name.endsWith(".dat"));
+        if (files == null) return list;
+        for (File f : files) {
+            try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+                String s = br.readLine();
+                list.add(User.fromFileString(s));
+            } catch (Exception e) {
+                // skip
+            }
+        }
+        return list;
+    }
+}
